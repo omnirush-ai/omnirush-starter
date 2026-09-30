@@ -26,7 +26,7 @@ This proves one useful debug workflow. It is not a measurement of every skill ac
 
 ## Limits
 
-Native Windows and Linux runs have not been performed locally. The included CI workflow has six jobs: Windows, macOS, and Linux on Node.js 22 and 24. It has not run on GitHub yet. Local kit checks ran on Node.js `24.16.0`.
+Native Windows and Linux runs were not performed locally. The [GitHub CI workflow](https://github.com/omnirush-ai/omnirush-starter/actions/workflows/starter-checks.yml) runs six jobs: Windows, macOS, and Linux on Node.js 22 and 24. Open that page for the latest results. Local kit checks ran on Node.js `24.16.0`.
 
 The desktop plugin targets OpenCode 2.x. A full signed-in desktop chat and subscription use have not been exercised by these tests. No app stack, provider, or subscription plan is configured by this template.
 
