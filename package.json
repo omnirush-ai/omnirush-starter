@@ -8,6 +8,7 @@
   "engines": { "node": ">=22.19.0" },
   "scripts": {
     "setup": "node scripts/sync-skills.mjs",
+    "bundle:best-practices": "node scripts/bundle-best-practices.mjs",
     "check:starter": "node scripts/check-starter.mjs",
     "test:starter": "node --test starter-tests/*.test.mjs",
     "check:project": "node scripts/project-checks.mjs"

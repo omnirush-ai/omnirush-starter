@@ -97,6 +97,9 @@ To add the full kit to an existing repo, use a clean branch. Merge the full layo
 
 ## Share this starter
 
+The [portable Best practices bundle](docs/APP-BUNDLE.md) lets OmniRush clients
+use the same guides in any project, with a local on/off setting.
+
 This is a public GitHub template. Share [omnirush-ai/omnirush-starter](https://github.com/omnirush-ai/omnirush-starter) with new users. They can choose **Use this template → Create a new repository** to start their own project. The repo includes a kit CI workflow for Windows, macOS, and Linux. Add app CI after choosing the app stack.
 
 OmniRush help: [CLI source and install guide](https://github.com/omnirush-ai/omnirush-cli), [desktop source and downloads](https://github.com/omnirush-ai/omnirush-gui), [desktop skills guide](https://github.com/omnirush-ai/omnirush-gui/blob/main/docs/skills-and-mcp.md).
