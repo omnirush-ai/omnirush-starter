@@ -16,6 +16,7 @@ Use the existing stack and conventions.
 - Keep the criteria within the user's request. Do not add a product roadmap.
 - For a small change, a few sentences are enough. Do not require a formal plan.
 - Ask only when an unresolved choice changes the requested behavior materially.
+- Use the relevant supplied source when requirements come from notes. Keep suggestions and open conflicts distinct from agreed behavior.
 
 Example: "A user can save a note, reopen it, and see the same text. An empty note shows a clear error."
 
@@ -28,6 +29,8 @@ Example: "A user can save a note, reopen it, and see the same text. An empty not
 - Do not claim a feature is complete because a button or endpoint exists alone.
 - If the requested flow stores data, verify that data can be read back.
 - Keep temporary mocks separate from claims about real application behavior.
+- For substantial work, use a bounded independent investigation, test design, or review when a native subagent can help. Give each agent a clear scope and integrate its evidence.
+- Explain a needed choice in small steps. Continue clear local implementation and checks after the explanation.
 - Add a dependency only when the requested application needs it and user scope permits it.
 
 ## Prove the behavior
@@ -41,6 +44,7 @@ Example: "A user can save a note, reopen it, and see the same text. An empty not
 - Report test, lint, typecheck, and build states explicitly, including missing checks.
 - If a check fails, resolve failures caused by this change and rerun that check.
 - If a failure is unrelated, give evidence and keep it visible in the result.
+- Try the real user flow when possible. Use the user's latest feedback to fix unmet criteria in this same task. Keep `PROJECT.md` current for work that spans chats.
 
 Finish with what works, how it was checked, and any criterion still unmet.
 Name the changed files and the exact commands that produced the evidence.

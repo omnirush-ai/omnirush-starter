@@ -13,6 +13,8 @@ The plugins read only the kit skills, project config, and past check report. The
 
 Both use `scripts/starter-lib.mjs`. Keep that file when moving the plugin. CLI project extensions load after project trust. Desktop plugins load when the workspace engine starts. Use `/reload` in CLI or restart desktop after editing a plugin.
 
+The guides include refactor, performance, and build work. For example, `/starter performance` reads the measurement guide. Reading a guide prepares the next task; ask the agent to do the work with the relevant skill and your actual goal.
+
 Desktop uses the 2.x plugin API: a default export with `id` and `setup(ctx)`. It discovers `.js` and `.ts` plugin files. A 1.x plugin factory or a `.mjs` file in the plugins folder will not work here. Use the skills alone on older builds until the app is updated.
 
 ## Add external tools only when needed
@@ -22,6 +24,7 @@ Use the built-in file, shell, search, and Git tools first. Add one missing capab
 - For GitHub issues and pull requests, use an available GitHub tool or `gh` with your own login.
 - For a web app, add a browser tool when you need to test the real UI.
 - For a chosen framework, use official docs or a docs tool when the current API is unclear.
+- For independent investigations or reviews, use the engine's native subagent tool when it is available. Keep each agent's task and file ownership clear.
 
 MCP means Model Context Protocol. An MCP server gives tools to the agent. Desktop users can add one in **Settings → Library → Add → MCP server**. CLI users configure their own `~/.omnirush/mcp.json` and inspect connections with `/mcp`.
 

@@ -11,6 +11,16 @@ Set up the project, then build one small feature and test it.
 Tell me how to start the app.
 ```
 
+## Start from existing code or notes
+
+```text
+Use omnirush-setup. My project is in [folder]. I want [result].
+Keep the existing stack. Read [relevant files or meeting notes].
+Separate agreed needs from suggestions. Record decisions and open questions.
+Find the real app checks, then finish one useful slice of the requested work.
+Explain the needed ideas in small steps.
+```
+
 ## Add a feature
 
 ```text
@@ -43,6 +53,39 @@ Focus on bugs, missing tests, and effects on existing behavior.
 Show the file and evidence for each issue. Do not change code yet.
 ```
 
+## Refactor or migrate
+
+```text
+Use omnirush-refactor. Improve [module or interface] because [problem].
+Preserve [required behavior and callers]. Check the baseline first.
+Make safe slices and verify the affected paths after each meaningful change.
+```
+
+## Improve a slow task
+
+```text
+Use omnirush-performance. [Real action] is slow with [workload].
+Measure [time, memory, or another useful metric] before changing code.
+Find the costly part. Compare repeatable before and after runs.
+Keep the required behavior working and report the measured result.
+```
+
+## Fix a build
+
+```text
+Use omnirush-build. [Exact command] fails in [folder] on [OS and runtime].
+The first error is [exact text]. Reproduce it, fix the cause, and rerun it.
+Check the output. Tell me which platforms were actually tested.
+```
+
+## Continue after trying the result
+
+```text
+I tried [steps]. I expected [result], but got [actual result or exact error].
+Keep the current goal. Use this new evidence to finish the missing behavior.
+Repeat the user flow and the checks that cover it.
+```
+
 ## Save work for later
 
 ```text
@@ -59,8 +102,10 @@ Continue from the next step. Confirm old check results again when needed.
 
 ## Use your plan well
 
-Give the agent one clear result. Add exact error text and file paths when useful. Keep one chat for one task until it is complete. Save a handoff before moving to a new chat.
+Give the agent one clear result. Add exact error text and file paths when useful. Keep one chat for one task until it is complete. Save a handoff before moving to a new chat. Use subagents for useful independent investigations or reviews when available, with clear questions and file ownership.
 
 Use the model already selected in OmniRush. Use lower effort for simple edits and more effort when a problem needs deeper reasoning. Judge the result by tests and the real user flow. Avoid repeated broad prompts such as `make everything better`.
 
 CLI users can check `/status` and `/usage`. These show the current model and account usage. The starter does not promise a token limit or a plan benefit.
+
+For first-use help and common problems, read [USAGE.md](USAGE.md).

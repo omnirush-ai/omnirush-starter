@@ -13,12 +13,15 @@ Report a missing runtime as a setup gap; do not silently install it.
 ## Learn what is being built
 
 - Read the user's request, repository instructions, and existing project files.
+- Find the intended application folder. A parent workspace can contain several separate repos.
 - Find the intended users, the problem to solve, and the first useful result.
 - Identify the stack from source files, manifests, and build configuration.
 - Keep the user's chosen stack. Do not pick a framework just to fill a blank.
 - For an empty project, describe the first user flow before choosing its tools.
 - Ask one short question only when a missing answer changes the product or stack.
 - State low-risk assumptions and continue work that does not depend on the answer.
+- For supplied notes, read the relevant sections and separate agreed needs, suggestions, and conflicts. Record the source of decisions; ask only about conflicts that affect the next task.
+- Explain one needed concept at a time as you do the work. Use [USAGE.md](../../../docs/USAGE.md) when the user is stuck. Keep the first result small enough to try.
 
 ## Find the real checks
 
@@ -51,5 +54,8 @@ Update `starter.config.json` without removing unrelated settings.
 
 Run `npm run check:project` after saving the configuration, if Node.js is available.
 Read all four reported states. Missing, skipped, and failed checks are not passes.
+
+If the user also asked to build or fix something, continue to that task after setup.
+Choose the relevant skill and finish a useful, checked slice. Show how to try the result.
 
 Finish with the project goal, checks that ran, remaining gaps, and the first next step.

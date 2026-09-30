@@ -6,7 +6,7 @@ import { findStarterRoot, readSkills, workflowGuide, WORKFLOWS } from "../script
 import { syncSkills } from "../scripts/sync-skills.mjs";
 import { fixture } from "./helpers.mjs";
 
-test("all six workflows are available from the canonical catalog", (t) => {
+test("every workflow is available from the canonical catalog", (t) => {
   const root = fixture(t);
   assert.deepEqual(readSkills(root).map((skill) => skill.name).sort(), WORKFLOWS.map((name) => `omnirush-${name}`).sort());
   for (const workflow of WORKFLOWS) assert.ok(workflowGuide(root, workflow).length > 300);
@@ -15,9 +15,9 @@ test("all six workflows are available from the canonical catalog", (t) => {
 
 test("desktop setup copies all skills and can run twice", (t) => {
   const root = fixture(t);
-  assert.equal(syncSkills(root), 6);
-  assert.equal(syncSkills(root), 6);
-  assert.equal(syncSkills(root, { checkOnly: true }), 6);
+  assert.equal(syncSkills(root), WORKFLOWS.length);
+  assert.equal(syncSkills(root), WORKFLOWS.length);
+  assert.equal(syncSkills(root, { checkOnly: true }), WORKFLOWS.length);
   for (const skill of readSkills(root)) {
     assert.equal(readFileSync(join(root, ".opencode/skills", skill.name, "SKILL.md"), "utf8"), skill.content);
   }

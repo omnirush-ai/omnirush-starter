@@ -15,6 +15,7 @@ Keep the review read-only unless the user also requests fixes.
 - Read the full changed behavior and enough surrounding code to understand its callers.
 - Check existing work so unrelated edits are not attributed to the reviewed change.
 - Compare the result with the request and its acceptance criteria.
+- Keep supplied source decisions and actual user feedback in scope. Confirm that the final flow meets them.
 - If the intended revision cannot be found, state that limit before making claims.
 
 ## Look for user-visible failures

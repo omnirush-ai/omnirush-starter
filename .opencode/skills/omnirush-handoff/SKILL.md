@@ -35,6 +35,10 @@ Include the cause of each gap and what is needed to close it.
 Record manual smoke steps and their observed result when they are the only evidence.
 Label stale results with the revision or time they describe.
 
+Include useful failed attempts, the user's latest feedback, and any source conflict
+that affects unfinished work. For parallel work, save unresolved agent tasks and
+file ownership so the next chat can integrate results without repeating the work.
+
 ## Make the next step usable
 
 - Give an exact file, command, or reproduction step where possible.

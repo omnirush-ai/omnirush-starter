@@ -16,7 +16,7 @@ export default {
       });
       editor.add({
         name: "starter_guide",
-        description: "Read an OmniRush starter workflow guide when setting up, building, debugging, testing, reviewing, or handing off a project.",
+        description: "Read an OmniRush starter guide for setup, features, debugging, tests, refactors, performance, build failures, reviews, or handoffs.",
         input: { type: "object", properties: { workflow: { type: "string", enum: WORKFLOWS } }, required: ["workflow"], additionalProperties: false },
         options: { codemode: false },
         async execute(input) {

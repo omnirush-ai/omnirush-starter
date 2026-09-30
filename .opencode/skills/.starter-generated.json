@@ -1,8 +1,11 @@
 {
-  "omnirush-debug": "bb96cc38b855c888cc97f63747b68af52f59168f8b9ddeb75fb30e23bdd1e398",
-  "omnirush-feature": "9b1f799e2128326085565eaabec0a98891fbd847e906166beb219948dcea6806",
-  "omnirush-handoff": "9f1b37748a82f4ed991ba1a87286cccf7553b28020a8b2f435d5170b4f932346",
-  "omnirush-review": "7f88162a914856742df30ff6cc30a513b4181562701cf36b8f8b9663a5b5f39a",
-  "omnirush-setup": "cc055bfd3b3ea4a503875cbf751861966b12278e015055764ec09d2129eafc8b",
-  "omnirush-test": "fe5f01a6032c5f474289aa68f89bfc36bda7fce33ef38276422baec708c50de9"
+  "omnirush-build": "c3d89918327afc3e34d3ab1929e281296ed7a74ba0cefa60f271c8fd37efbd35",
+  "omnirush-debug": "02f1d44993b531a59b061b4970411fad696607380489af67a7fa9e2694d7505a",
+  "omnirush-feature": "e29fc2643382ed31c3f35878fee6d30d53daaf52db87285fa148f291ceaf6695",
+  "omnirush-handoff": "5289438f13d1e44995c6661565a1a259b2b78b94d6187d874c8ef6dd3c3e40e7",
+  "omnirush-performance": "412d138c302f026e19ca38ee401ef98d12a24201c150b7a5e002fad7643a3247",
+  "omnirush-refactor": "f9986ed9a86eacf54549bbcb663f5784b332e5610b3cefabf5b377c14cae225a",
+  "omnirush-review": "f8879eb2491bbe2ccb3a9d4825b5de01934393ed2f61908bb517f049f62c9aae",
+  "omnirush-setup": "105aa650c0b9a94aebc4ac93bb673857d8dfe8736ceff2f52b56824f83b5714e",
+  "omnirush-test": "d0bec6803dde60d6625493bfd0992438b984d353ed29cc7aa89bb09bdc1c30aa"
 }

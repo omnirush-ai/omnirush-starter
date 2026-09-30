@@ -7,6 +7,9 @@ Status: no work recorded yet. Use `omnirush-handoff` to replace these prompts wi
 - Checks actually run and their results:
 - Checks not run or gaps:
 - Accepted decisions:
+- Latest user feedback and useful failed attempts:
+- Relevant source decisions or unresolved conflicts:
+- Unfinished agent tasks and file ownership, if used:
 - Open problem:
 - Next step:
 

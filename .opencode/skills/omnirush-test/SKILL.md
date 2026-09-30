@@ -17,6 +17,7 @@ Choose checks that could catch a real mistake in that behavior.
 - For stored data, check read-back or persistence when the feature requires it.
 - For access control or payments, check the relevant rejection path as well as success.
 - Do not add unrelated cases only to raise a coverage percentage.
+- Tie each case to the task's acceptance criteria. A substantial change can benefit from an independent native subagent identifying missing cases; check its evidence before adding them.
 
 ## Use the right level
 

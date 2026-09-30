@@ -26,6 +26,7 @@ Read [PROJECT.md](../../../PROJECT.md) for the expected behavior and local setup
 - Check recent edits, configuration, and dependency usage when the evidence points there.
 - Use current logs to update the diagnosis instead of defending an earlier guess.
 - Stop broad searching when the failing behavior and its cause are explained.
+- For independent possible causes, use a bounded native subagent investigation when it helps. Compare its evidence with the same reproduction and keep edits owned by one agent per file.
 
 ## Make a focused fix
 
@@ -44,6 +45,7 @@ Read [PROJECT.md](../../../PROJECT.md) for the expected behavior and local setup
 - Report test, lint, typecheck, and build states, including checks not available or not run.
 - If the fix cannot be verified, describe the remaining gap and next concrete check.
 - Do not treat disappearing error text alone as proof that the user's task now works.
+- When the user supplies new logs or tries the result, update the diagnosis from that evidence. Keep the same goal until the original failure is resolved or a specific blocker remains.
 
 Finish with the cause, the fix, and the commands or steps that prove the result.
 Distinguish a verified repair from a proposed fix.
