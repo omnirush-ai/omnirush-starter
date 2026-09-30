@@ -6,7 +6,7 @@ This is a blank project kit. You choose the app, language, and framework. It wor
 
 ## Start here
 
-1. Download or clone this repo into a new folder. Open that folder in OmniRush.
+1. Choose [Use this template](https://github.com/omnirush-ai/omnirush-starter/generate) to create your own repo, then clone it into a new folder. You can also download this repo as a ZIP. Open the folder in OmniRush.
 2. Run `npm run setup` once in that folder. It prepares the desktop skill copies. You can ask OmniRush to run it for you.
 3. Paste this into your first chat:
 
@@ -90,6 +90,6 @@ To add the full kit to an existing repo, use a clean branch. Merge the full layo
 
 ## Share this starter
 
-This local repo is ready to publish. Once it is on GitHub, enable **Settings → General → Template repository**. New users can then choose **Use this template**. The repo includes a kit CI workflow for Windows, macOS, and Linux. Add app CI after choosing the app stack.
+This is a public GitHub template. Share [omnirush-ai/omnirush-starter](https://github.com/omnirush-ai/omnirush-starter) with new users. They can choose **Use this template → Create a new repository** to start their own project. The repo includes a kit CI workflow for Windows, macOS, and Linux. Add app CI after choosing the app stack.
 
 OmniRush help: [CLI source and install guide](https://github.com/omnirush-ai/omnirush-cli), [desktop source and downloads](https://github.com/omnirush-ai/omnirush-gui), [desktop skills guide](https://github.com/omnirush-ai/omnirush-gui/blob/main/docs/skills-and-mcp.md).
