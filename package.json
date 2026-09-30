@@ -1,0 +1,15 @@
+{
+  "name": "omnirush-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A project starter with skills, local plugins, and test habits for OmniRush users.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22.19.0" },
+  "scripts": {
+    "setup": "node scripts/sync-skills.mjs",
+    "check:starter": "node scripts/check-starter.mjs",
+    "test:starter": "node --test starter-tests/*.test.mjs",
+    "check:project": "node scripts/project-checks.mjs"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "project": {
+    "name": "",
+    "goal": "",
+    "stack": []
+  },
+  "checks": {
+    "test": null,
+    "lint": null,
+    "typecheck": null,
+    "build": null
+  }
+}
