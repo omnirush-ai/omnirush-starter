@@ -17,6 +17,7 @@ When the project goal or app checks are not set, use the `omnirush-setup` skill.
 - Build, package, or toolchain failure: `omnirush-build`.
 - Code review: `omnirush-review`.
 - Save or resume progress: `omnirush-handoff`.
+- Move CLI chats into the desktop app: `omnirush-import-chats`.
 
 Read the skill's `SKILL.md` when it applies. Canonical skills are in `.agents/skills/`. Desktop copies are in `.opencode/skills/`. Load only the skills needed for the task.
 

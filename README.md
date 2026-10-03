@@ -64,6 +64,7 @@ Trust the project when OmniRush asks. Inside the session, start with:
 | `omnirush-build` | Reproduce and fix build, package, or toolchain failures. |
 | `omnirush-review` | Find code problems and show evidence. |
 | `omnirush-handoff` | Save progress so the next chat can resume. |
+| `omnirush-import-chats` | Move saved CLI chats into the desktop app. |
 
 [PROJECT.md](PROJECT.md) holds the goal, current task, and decisions. [AGENTS.md](AGENTS.md) tells the agent how to work. [Prompt examples](docs/PROMPTS.md) help you ask for useful work. [Practice tasks](docs/PRACTICE.md) teach the full work loop. [Plugins](docs/PLUGINS.md) explains the local adapters and optional tools.
 

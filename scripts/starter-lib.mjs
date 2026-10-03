@@ -4,7 +4,7 @@ import { dirname, isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const CHECK_NAMES = ["test", "lint", "typecheck", "build"];
-export const WORKFLOWS = ["setup", "feature", "debug", "test", "refactor", "performance", "build", "review", "handoff"];
+export const WORKFLOWS = ["setup", "feature", "debug", "test", "refactor", "performance", "build", "review", "handoff", "import-chats"];
 export const CONFIG_FILE = "starter.config.json";
 export const REPORT_FILE = ".starter/last-check.json";
 
