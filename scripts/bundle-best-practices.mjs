@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { readSkills } from "./starter-lib.mjs";
 
 // Update this reference when the canonical source skills change.
-export const SOURCE_COMMIT = "4cd6fcedc62f604522db3621e5c509475ada6a0f";
+export const SOURCE_COMMIT = "c50f4460fbb99b7d178561ba940ce28f306d898c";
 
 export const SYSTEM_PROMPT = `OmniRush Best practices
 
