@@ -1,7 +1,7 @@
 # Bundled Best practices
 
 [bundles/best-practices.json](../bundles/best-practices.json) is the portable
-guide pack for OmniRush clients. It contains a short instruction, nine guides,
+guide pack for OmniRush clients. It contains a short instruction, ten guides,
 the MIT notice, and the canonical source revision and hashes.
 
 The guides use each project's existing instructions, tools, and checks. They
