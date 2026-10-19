@@ -7,12 +7,12 @@ import { readSkills } from "./starter-lib.mjs";
 // Update this reference when the canonical source skills change.
 export const SOURCE_COMMIT = "4cd6fcedc62f604522db3621e5c509475ada6a0f";
 
-export const SYSTEM_PROMPT = `OmniRush Best practices
+export const SYSTEM_PROMPT = `Best practices
 
 Help the user finish the software task they asked for. Use these guides only for relevant project work; keep ordinary chat brief.
 - Follow the user's current request and the repository's own instructions. Find the intended app folder and preserve unrelated work.
 - Keep the existing stack, tools, model, and account choices. Do not install the starter kit, create its templates, or change global settings unless requested.
-- For useful work, choose the relevant omnirush-setup, feature, debug, test, refactor, performance, build, review, or handoff guide. Load only the guides needed now.
+- For useful work, choose the relevant project-setup, feature, debug, test, refactor, performance, build, review, or handoff guide. Load only the guides needed now.
 - Explain unfamiliar choices in small steps. Continue clear, authorized local work without repeated permission questions. Ask when a missing choice changes the result or required authority is absent.
 - Define the user-visible result, make a focused change, run the project's real checks, and use the latest feedback to finish the same task. Never call an unrun check passed.
 - Use bounded independent agent work only when it helps. Give each agent a clear scope and verify the combined result. Do not create extra turns, code, or calls to meet activity targets.
@@ -36,6 +36,18 @@ Run applicable project checks and read their output and exit status.
 Missing, skipped, and failed checks are not passes.
 
 `;
+
+// The app bundle names no product: guides are `project-<workflow>` and their
+// text says "software project" (the starter keeps its own names).
+export const portableName = (name) => name.replace(/^omnirush-/, "project-");
+
+function neutral(text) {
+  return text
+    .replaceAll("checks for OmniRush guides", "checks for these guides")
+    .replaceAll("an OmniRush software project", "a software project")
+    .replaceAll("an OmniRush project", "a software project")
+    .replaceAll("existing OmniRush project code", "existing project code");
+}
 
 function replaceRequired(text, before, after, name) {
   if (!text.includes(before)) throw new Error(`${name}: canonical wording changed; review the portable adaptation.`);
@@ -78,11 +90,15 @@ function portableSkill(skill) {
       "Write a concise handoff to [docs/HANDOFF.md](../../../docs/HANDOFF.md).\nRead the project's existing goal and setup notes and the current working tree first.",
       "Read the project's existing notes and the current working tree first.\nUse an existing handoff location or the destination requested by the user.\nIf no file location is agreed, give a concise handoff in the reply.\nDo not create starter templates or copy raw private notes into the project.", skill.name);
   }
-  const content = `---\nname: ${skill.name}\ndescription: ${JSON.stringify(description)}\n---\n\n${body.trim()}\n`;
+  const name = portableName(skill.name);
+  description = neutral(description);
+  body = neutral(body);
+  const content = `---\nname: ${name}\ndescription: ${JSON.stringify(description)}\n---\n\n${body.trim()}\n`;
   if (/starter\.config|PROJECT\.md|check:project|test:starter|npm run setup|\]\(\.\.\//.test(content)) {
     throw new Error(`${skill.name}: starter-only assumptions remain in the portable guide.`);
   }
-  return { name: skill.name, description, content, sourceSha256: createHash("sha256").update(skill.content).digest("hex") };
+  if (/omni\s*rush/i.test(content)) throw new Error(`${skill.name}: the portable guide still names the product.`);
+  return { name, description, content, sourceSha256: createHash("sha256").update(skill.content).digest("hex") };
 }
 
 export function bestPracticesBundle(root) {
