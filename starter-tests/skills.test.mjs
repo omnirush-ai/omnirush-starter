@@ -11,10 +11,12 @@ test("the portable app bundle is current and every guide loads without starter-o
   const raw = readFileSync(join(REPO, "bundles/best-practices.json"), "utf8");
   const bundle = JSON.parse(raw);
   assert.equal(raw, `${JSON.stringify(bestPracticesBundle(REPO), null, 2)}\n`);
-  assert.deepEqual(bundle.skills.map((skill) => skill.name).sort(), WORKFLOWS.map((name) => `omnirush-${name}`).sort());
+  assert.deepEqual(bundle.skills.map((skill) => skill.name).sort(), WORKFLOWS.map((name) => `project-${name}`).sort());
+  assert.doesNotMatch(bundle.systemPrompt, /omni\s*rush/i);
   for (const skill of bundle.skills) {
     assert.equal(parseSkill(skill.content, skill.name).description, skill.description);
     assert.doesNotMatch(skill.content, /starter\.config|PROJECT\.md|check:project|test:starter|npm run setup|\]\(\.\.\//);
+    assert.doesNotMatch(skill.content, /omni\s*rush/i);
   }
   assert.match(bundle.license, /Permission is hereby granted/);
 });
